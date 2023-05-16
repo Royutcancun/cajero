@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Cajero Automático</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <h1>Cajero Automático</h1>
+        <div id="login" class="mt-4">
+            <h2>Selecciona una cuenta</h2>
+            <div class="form-group">
+                <label for="accountSelect">Cuenta:</label>
+                <select id="accountSelect" class="form-control">
+                    <option value="">Seleccionar cuenta</option>
+                    <option value="1">Cuenta 1</option>
+                    <option value="2">Cuenta 2</option>
+                    <option value="3">Cuenta 3</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="passwordInput">Contraseña:</label>
+                <input type="password" id="passwordInput" class="form-control">
+            </div>
+            <button id="loginButton" class="btn btn-primary mt-4">Ingresar</button>
+        </div>
+
+        <div id="options" class="mt-4" style="display: none;">
+            <h2>Opciones de cuenta</h2>
+            <button id="checkBalanceButton" class="btn btn-primary">Consultar saldo</button>
+            <button id="depositButton" class="btn btn-primary">Ingresar monto</button>
+            <button id="withdrawButton" class="btn btn-primary">Retirar monto</button>
+            <div>
+                <button id="logoutButton" class="btn btn-danger mt-4">Cerrar sesión</button>
+            </div>
+        </div>
+
+        <div id="balance" class="mt-4" style="display: none;">
+            <h2>Saldo actual</h2>
+            <p id="balanceAmount"></p>
+            <button id="backButton1" class="btn btn-primary mt-4">Volver</button>
+        </div>
+
+        <div id="deposit" class="mt-4" style="display: none;">
+            <h2>Ingresar monto</h2>
+            <p></p>
+            <div class="form-group">
+                <label for="depositAmountInput">Monto a ingresar:</label>
+                <input type="number" id="depositAmountInput" class="form-control">
+            </div>
+            <button id="depositConfirmButton" class="btn btn-primary">Confirmar</button>
+            <button id="backButton2" class="btn btn-primary">Volver</button>
+        </div>
+
+        <div id="withdraw" class="mt-4" style="display: none;">
+            <h2>Retirar monto</h2>
+            <p id="balanceAmount"></p>
+            <div class="form-group">
+                <label for="withdrawAmountInput">Monto a retirar:</label>
+                <input type="number" id="withdrawAmountInput" class="form-control">
+            </div>
+            <button id="withdrawConfirmButton" class="btn btn-primary">Confirmar</button>
+            <button id="backButton3" class="btn btn-primary">Volver</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
+
+
