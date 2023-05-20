@@ -75,7 +75,7 @@ function handleWithdraw() {
 function handleDepositConfirm() {
     const depositAmount = parseFloat(document.getElementById('depositAmountInput').value);
 
-    if (depositAmount <= 0 || depositAmount == NaN) {
+    if (depositAmount <= 0 || depositAmount === NaN) {
         alert('Ingresa un monto válido.');
         return;
     }
