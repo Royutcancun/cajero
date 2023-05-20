@@ -74,11 +74,12 @@ function handleWithdraw() {
 
 function handleDepositConfirm() {
     const depositAmount = parseFloat(document.getElementById('depositAmountInput').value);
-
-    if (depositAmount <= 0 || depositAmount === NaN) {
+    if (depositAmount <= 0 || isNaN(depositAmount)) {
         alert('Ingresa un monto válido.');
         return;
     }
+
+    
 
     const account = accounts.find(acc => acc.id === selectedAccount);
     const newBalance = account.balance + depositAmount;
@@ -89,6 +90,7 @@ function handleDepositConfirm() {
     }
 
     account.balance = newBalance;
+    document.getElementById('depositAmountInput').value="";
     alert(`Se ha ingresado $${depositAmount.toFixed(2)}. El nuevo saldo es $${newBalance.toFixed(2)}.`);
     showOptions();
 }
@@ -110,6 +112,7 @@ function handleWithdrawConfirm()        {
     }
 
     account.balance = newBalance;
+    document.getElementById('withdrawAmountInput').value="";
     alert(`Se ha retirado $${withdrawAmount.toFixed(2)}. El nuevo saldo es $${newBalance.toFixed(2)}.`);
     showOptions();
 }
